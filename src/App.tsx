@@ -10,7 +10,12 @@ function App() {
   const [theme, setTheme] = useState(light);
 
   const toggleTheme = () => {
-      setTheme(theme.title === 'light' ? dark : light);
+    if (theme.title === 'light') {
+      
+      setTheme(dark);
+    } else {
+      setTheme(light);
+    }
   };
 
 
